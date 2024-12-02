@@ -40,7 +40,7 @@ def gera_imagens_similares_experimento(image_folder_imagens_originais, image_fol
 
         # operacao blur
 
-        imagem_blur = imagem_teste.filter(ImageFilter.BLUR)
+        imagem_blur = imagem_teste.filter(ImageFilter.GaussianBlur(radius=2))
 
         imagem_blur.save(os.path.join(image_folder_perceptual, nome_img + "_blur." + extensao))
 
